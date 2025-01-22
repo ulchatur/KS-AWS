@@ -22,3 +22,12 @@ output "private_security_group_id" {
   description = "Private security group."
   value       = module.vpc.private_security_group_id
 }
+output "ec2_instance_ids" {
+  description = "EC2 instances ID"
+  value       = module.ec2.ec2_instance_ids
+}
+
+output "ec2_instance_public_ips" {
+  description = "EC2 Instance Public IP"
+  value       = module.ec2.ec2_instance_public_ips
+}
