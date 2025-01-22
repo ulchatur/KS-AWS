@@ -1,10 +1,10 @@
 variable "ami_id" {
-  description = "AMI ID for the EC2 instance"
+  description = "AMI ID"
   type        = string
 }
 
 variable "instance_type" {
-  description = "Instance type for the EC2 instance"
+  description = "Instance type"
   type        = string
 }
 
@@ -14,12 +14,12 @@ variable "subnet_ids" {
 }
 
 variable "security_group_id" {
-  description = "Security group ID to attach to the instance"
+  description = "Security group ID for EC2"
   type        = string
 }
 
 variable "instance_name" {
-  description = "Name tag for the instance"
+  description = "Name of EC2"
   type        = string
 }
 variable "key_name" {
