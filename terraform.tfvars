@@ -11,3 +11,11 @@ ami_id          = "ami-07b69f62c1d38b012"
 instance_type   = "t2.micro"
 instance_name   = "KS-Instance"
 key_name        = "vpc"
+
+# Aurora PostgreSQL variables
+db_subnet_group_name = "ks-aurora-subnet-group"
+cluster_identifier   = "ks-aurora-cluster"
+db_username          = "ks_admin_user"
+db_password          = "KS!12345678901112"
+instance_class = "db.t3.medium"
+instance_count = 2

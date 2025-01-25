@@ -1,3 +1,5 @@
+# VPC Variables
+
 variable "aws_region" {
   description = "AWS region"
   type        = string
@@ -18,6 +20,8 @@ variable "private_subnets" {
   type        = list(string)
 }
 
+# EC2 Variables
+
 variable "ami_id" {
   description = "AMI ID"
   type        = string
@@ -37,3 +41,34 @@ variable "key_name" {
   type        = string
 }
 
+# Aurora PostgreSQL Variables
+variable "db_subnet_group_name" {
+  description = "Aurora DB Subnet group."
+  type        = string
+}
+
+variable "cluster_identifier" {
+  description = "Aurora DB cluster Identifier."
+  type        = string
+}
+
+variable "db_username" {
+  description = "Master user"
+  type        = string
+}
+
+variable "db_password" {
+  description = "Master password"
+  type        = string
+}
+
+variable "instance_class" {
+  description = "DB instances"
+  type        = string
+}
+
+variable "instance_count" {
+  description = "Number of instances in the cluster."
+  type        = number
+  default     = 1
+}

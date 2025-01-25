@@ -31,3 +31,17 @@ output "ec2_instance_public_ips" {
   description = "EC2 Instance Public IP"
   value       = module.ec2.ec2_instance_public_ips
 }
+output "aurora_db_cluster_name" {
+  description = "Aurora DB cluster name"
+  value       = module.aurora_postgres.cluster_identifier
+}
+
+output "aurora_db_cluster_endpoint" {
+  description = "Endpoint for Aurora DB cluster"
+  value       = module.aurora_postgres.endpoint
+}
+
+output "aurora_db_cluster_reader_endpoint" {
+  description = "Reader endpoint for Aurora DB cluster"
+  value       = module.aurora_postgres.reader_endpoint
+}
