@@ -1,3 +1,17 @@
+#ECR Outputs
+
+output "ecr_repository_name" {
+  description = "ECR repository name"
+  value       = module.ecr.repository_name
+}
+
+output "ecr_repository_url" {
+  description = "ECR repository URL"
+  value       = module.ecr.repository_url
+}
+
+#VPC Outputs
+
 output "vpc_id" {
   description = "VPC ID."
   value       = module.vpc.vpc_id
@@ -22,6 +36,9 @@ output "private_security_group_id" {
   description = "Private security group."
   value       = module.vpc.private_security_group_id
 }
+
+#EC2 Outputs
+
 output "ec2_instance_ids" {
   description = "EC2 instances ID"
   value       = module.ec2.ec2_instance_ids
@@ -31,6 +48,14 @@ output "ec2_instance_public_ips" {
   description = "EC2 Instance Public IP"
   value       = module.ec2.ec2_instance_public_ips
 }
+
+output "sonarqube_url" {
+  description = "SonarQube Web UI URL"
+  value       = module.ec2.sonarqube_url
+}
+
+# DB Outputs
+
 output "aurora_db_cluster_name" {
   description = "Aurora DB cluster name"
   value       = module.aurora_postgres.cluster_identifier

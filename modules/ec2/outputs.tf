@@ -8,3 +8,7 @@ output "ec2_instance_public_ips" {
   value       = aws_instance.ec2_instance[*].public_ip
 }
 
+output "sonarqube_url" {
+  description = "URL to access SonarQube"
+  value       = [for ip in aws_instance.ec2_instance[*].public_ip : "http://${ip}:9000"]
+}
